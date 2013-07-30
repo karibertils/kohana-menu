@@ -138,6 +138,19 @@ class Kohana_Menu {
 	}
 
 	/**
+	 * Instantiate a new menu
+	 *
+	 * @param array
+	 * @throws Kohana_Exception
+	 * @return Menu
+	 * @since 2.0
+	 */
+	public static function factory2($array)
+	{
+		return new Menu($array);
+	}
+
+	/**
 	 * Render the menu into HTML
 	 *
 	 * @since 2.0

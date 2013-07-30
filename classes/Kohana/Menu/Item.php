@@ -45,7 +45,7 @@ class Kohana_Menu_Item {
 		}
 
 		// Apply URL::site
-		if (! 'http://' == substr($this->_config['url'], 0, 7)    AND ! 'https://' == substr($this->_config['url'], 0, 8)) {
+		if ('#' != substr($this->_config['url'], 0, 1) AND 'http://' != substr($this->_config['url'], 0, 7) AND ! 'https://' != substr($this->_config['url'], 0, 8)) {
 			$this->_config['url'] = URL::site($this->_config['url']);
 		}
 
